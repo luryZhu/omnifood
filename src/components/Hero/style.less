@@ -1,0 +1,64 @@
+.section-hero {
+    background-color: @colorTint1;
+    padding: 9.6rem 0;
+}
+
+.hero {
+    margin: 0 auto;
+    max-width: 130rem;
+    /* 1300px */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9.6rem;
+}
+
+.heading-primary {
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #333;
+    margin-bottom: 3.2rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 3.2rem;
+
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.delivered-meals {
+    display: flex;
+    margin-top: 4.8rem;
+    align-items: center;
+    gap: 1.6rem
+}
+
+.delivered-imgs {
+    display: flex;
+    img {
+        height: 4.8rem;
+        width: 4.8rem;
+        border-radius: 50%;
+        margin-right: -1.6rem;
+        border: 3px solid @colorTint1;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    span {
+        color: @colorShade1;
+    }
+}
