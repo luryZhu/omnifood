@@ -1,0 +1,107 @@
+// rem & em
+// 在media query中不是基于HTML元素的设置的
+// 在这里 1rem=1em=16px
+// 媒体查询中rem有问题，一般使用em
+
+/* 1344px 较小pc */
+@media (max-width:84em) {
+    .hero {
+        max-width: 120rem;
+    }
+
+    .heading-primary {
+        font-size: 4.4rem;
+    }
+
+    .testimonials {
+        gap: 3.2rem;
+    }
+}
+
+/* 1344px 平板 */
+@media (max-width:75em) {
+    html {
+        // 1rem=9px
+        font-size: 56.25%;
+    }
+
+    .heading-secondary {
+        font-size: 3.6rem;
+    }
+
+    .heading-tertiary {
+        font-size: 2rem;
+    }
+
+    .grid-container2 {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
+    }
+
+    .grid-container3 {
+        gap: 4.8rem;
+    }
+
+    .grid-container4 {
+        gap: 3.2rem;
+    }
+
+    .hero {
+        gap: 4.8rem;
+    }
+
+    .main-nav-list {
+        gap: 3.2rem;
+    }
+
+    .testimonials-container {
+        padding: 6.4rem;
+    }
+}
+
+/* 944px 平板 */
+@media (max-width:59em) {
+    html {
+        // 1rem=9px
+        font-size: 50%;
+    }
+
+    .hero {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text-box,
+    .hero-img-box {
+        text-align: center;
+        padding: 0 8rem;
+    }
+
+    .hero-img {
+        width: 60%;
+    }
+
+    .delivered-meals {
+        justify-content: center;
+    }
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .cta {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-form {
+        margin-top: 1.2rem;
+    }
+}

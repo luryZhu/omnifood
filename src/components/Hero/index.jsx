@@ -33,7 +33,7 @@ const Hero = () => {
             <p className="delivered-text"><span>250,000+</span> meals delivered already</p>
           </div>
         </div>
-        <div className="hexo-img-box">
+        <div className="hero-img-box">
           <img className="hero-img" src={HeroImg} alt="hero" />
         </div>
       </div>
