@@ -1,0 +1,76 @@
+.section-cta {
+    padding: 4.8rem 0 12.8rem 0;
+}
+
+.cta {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: @borderRadiusDefault;
+
+    background-color: @colorShade1;
+    background-image: linear-gradient(to right bottom,
+            #eea564, @colorTheme1 );
+
+    // height: 50rem;
+
+}
+
+.cta-text-box {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: @colorShade2;
+
+    .heading-secondary {
+        margin-bottom: 3.2rem;
+        color: inherit;
+    }
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 3.2rem;
+}
+
+.cta-img-box {
+    background-image:
+        linear-gradient(to right bottom,
+            rgba(205, 109, 24, 0.35),
+            rgba(211, 147, 73, 0.35)),
+        url("../../assets/images/eating.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+    align-items: stretch;
+
+    label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: @fontWeightMedium;
+        margin-bottom: 1.2rem;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        font-family: inherit;
+        border-radius: @borderRadiusDefault;
+        // border: none;
+        transform: all 0.3s;
+
+        &::placeholder {
+            color: #aaa;
+        }
+    }
+
+}

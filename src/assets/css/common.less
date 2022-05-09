@@ -9,23 +9,43 @@
 
 - line-height
 default: 1
+large: 1.6
 
 - font-weight: 400 500 600 700
+
+- letter-spacing: -0.5px 0.75px
+
 */
+@fontWeightDefault: 400;
+@fontWeightMedium: 500;
+@fontWeightSemiBold: 600;
+@fontWeightBold: 700;
+
 /* 2 颜色 */
 @colorTheme1: #e67e22;
 @colorTint1: #fdf2e9;
+@colorTint2: #fae5d3;
+@colorTint3: #f5cba7;
 @colorShade1: #cf711f;
-@colorGrey1: #555;
-@colorGrey2: #333;
-@colorWhite: #fff;
+@colorShade2: #45260a;
+@colorGreyLighter: #999;
+@colorGreyLight: #555;
+@colorGreyDark: #333;
+@colorWhiteLight: #fff;
+@colorWhiteDark: #ddd;
 
 /*
-------3 空白
+------3 间距 Spacing/ White Space
 2 4 6 8 12 16 24 32 48 64 80 96
 
 */
 
+/* 4 radius */
+@borderRadiusDefault: 9px;
+
+/************************************/
+/* 全局设置 */
+/************************************/
 
 * {
     padding: 0;
@@ -45,30 +65,63 @@ html {
 body {
     font-family: "Rubik", sans-serif;
     line-height: 1;
-    font-weight: 400;
-    color: #555;
+    font-weight: @fontWeightDefault;
+    color: @colorGreyLight;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+strong {
+    font-weight: @fontWeightMedium;
+}
+
+button,
+select {
+    border: none;
+    cursor: pointer;
+}
+
+*:focus {
+    // outline: none;
+    // outline: 4px dotted @colorTheme1;
+    box-shadow: 0 0 0 0.8rem @colorTint3;
 }
 
 // 按钮
-.btn{
+.btn {
+
+    &,
     &:link,
     &:visited {
         display: inline-block;
-        border-radius: 1rem;
-        text-decoration: none;
+        border-radius: @borderRadiusDefault;
         font-size: 2rem;
         font-weight: 600;
         padding: 1.6rem 3.2rem;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
+        font-family: inherit;
     }
 }
 
-.btn-full{
+.btn-full {
+
     &:link,
     &:visited {
         background-color: @colorTheme1;
-        color: @colorWhite;
+        color: @colorWhiteLight;
     }
+
     &:hover,
     &:active {
         background-color: @colorShade1;
@@ -76,23 +129,147 @@ body {
 }
 
 
-.btn-outline{
+.btn-outline {
+
     &:link,
     &:visited {
-        background-color: @colorWhite;
-        color: @colorGrey1;
+        background-color: @colorWhiteLight;
+        color: @colorGreyLight;
     }
 
     &:hover,
     &:active {
         background-color: @colorTint1;
-        color: @colorGrey1;
+        color: @colorGreyLight;
         /* 加上不会重排的边框 */
-        box-shadow: inset 0 0 0 3px @colorWhite;
+        box-shadow: inset 0 0 0 3px @colorWhiteLight;
     }
 }
 
-/* 可复用的右边界 */
+.btn-form {
+    background-color: @colorShade2;
+    color: @colorWhiteLight;
+    align-self: end;
+    padding: 1.2rem;
+
+}
+
+.link {
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        color: @colorTheme1;
+        font-size: 1.8rem;
+        padding-bottom: 2px;
+        border-bottom: 1px solid currentColor;
+        transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+        color: @colorShade1;
+        border-bottom: 1px solid transparent;
+    }
+}
+
+/* 可复用的边界 */
 .margin-right-sm {
     margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+/* 居中容器 */
+.container {
+    max-width: 120rem; // 1140也是一个通用标准
+    margin: 0 auto;
+    padding: 0 4.8rem;
+}
+
+/* grid容器 */
+.grid(@col, @align: unset) {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+    grid-template-columns: repeat(@col, 1fr);
+    align-items: @align;
+
+    &:not(:last-child) {
+        margin-bottom: 9.6rem;
+    }
+}
+
+.grid-container2 {
+    .container;
+    .grid(2, center);
+}
+
+/* 标题 */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: @fontWeightBold;
+    line-height: 1.05;
+    color: @colorGreyDark;
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 4.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+    font-size: 4rem;
+    margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+    font-size: 2.4rem;
+    margin-bottom: 3.2rem;
+}
+
+.subheading {
+    display: block;
+    font-weight: @fontWeightMedium;
+    font-size: 2rem;
+    color: @colorShade1;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.tag(@colorTag) {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: @colorTag;
+    color: @colorGreyDark;
+    border-radius: @borderRadiusDefault;
+    font-weight: @fontWeightSemiBold;
+
+}
+
+/* 列表 */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    // height: 2.4rem;
+    // width: 2.4rem;
+    font-size: 2.4rem;
+    color: @colorShade1;
 }

@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3383095 */
+  src: url('../iconfont/iconfont.woff2?t=1651946908399') format('woff2'),
+    url('../iconfont/iconfont.woff?t=1651946908399') format('woff'),
+    url('../iconfont/iconfont.ttf?t=1651946908399') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weibo:before {
+  content: "\e882";
+}
+
+.icon-wechat-fill:before {
+  content: "\e883";
+}
+
+.icon-github-fill:before {
+  content: "\e885";
+}
+
+.icon-chicken_outlined:before {
+  content: "\e93f";
+}
+
+.icon-pause_circle_outlined:before {
+  content: "\e98a";
+}
+
+.icon-infinity:before {
+  content: "\e968";
+}
+
+.icon-leaf:before {
+  content: "\e970";
+}
+
+.icon-close:before {
+  content: "\e7fd";
+}
+
+.icon-check:before {
+  content: "\e7fc";
+}
+
+.icon-hot:before {
+  content: "\e753";
+}
+
+.icon-Food:before {
+  content: "\e681";
+}
+
+.icon-Star:before {
+  content: "\e6db";
+}

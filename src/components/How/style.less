@@ -1,0 +1,53 @@
+.section-how{
+    padding: 9.6rem 0;
+}
+
+.step-img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .step-img {
+        width: 35%;
+    }
+    &::before,
+    &::after {
+        content: "";
+        display: block;   
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    &::before {
+        width: 60%;
+        // 无法直接继承高度，但是可以用padding继承宽度
+        padding-bottom: 60%;
+        background-color: @colorTint1;
+        z-index: -2;
+    }
+    &::after {
+        width: 45%;
+        // 无法直接继承高度，但是可以用padding继承宽度
+        padding-bottom: 45%;
+        background-color: @colorTint2;
+        z-index: -1;
+    }
+}
+
+
+.step-text-box{
+    .step-number{
+        font-size: 8.6rem;
+        font-weight: @fontWeightMedium;
+        color: @colorWhiteDark;
+        margin-bottom: 1.6rem;
+    }
+
+    .step-description{
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+}
