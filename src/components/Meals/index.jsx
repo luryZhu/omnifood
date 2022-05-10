@@ -5,7 +5,7 @@ import Heading from '../utils/Heading'
 
 const Meals = () => {
   return (
-    <section className='section-meals'>
+    <section className='section-meals' id='meals'>
       <Heading sub="Meals" main="Omnifood AI chooses from 5,000+ recipes"></Heading>
       <div className="grid-container3">
         {/* meal 1 */}

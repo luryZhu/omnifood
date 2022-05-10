@@ -1,22 +1,36 @@
 import './style.less'
 import Logo from '../../assets/images/omnifood-logo.png'
+import NavLink from '../utils/NavLink'
 import { useEffect, useState } from 'react'
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+
   function onClickHandle() {
     setIsNavOpen(!isNavOpen)
   }
+
+  useEffect(() => {
+    if (isNavOpen) {
+      console.log("stop scroll")
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.documentElement.style.overflow = 'visible'
+    }
+  }, [isNavOpen])
+
   return (
-    <header className={isNavOpen ? 'header nav-open' : 'header'}>
-      <img className='logo' src={Logo} alt="omnifood logo" />
+    <header className={'header ' + (isNavOpen ? 'nav-open ' : '')}>
+      <NavLink to="#">
+        <img className='logo' src={Logo} alt="omnifood logo" />
+      </NavLink>
       <nav className='main-nav'>
         <ul className='main-nav-list'>
-          <li><a className='main-nav-link' href="#">How it works</a></li>
-          <li><a className='main-nav-link' href="#">Meals</a></li>
-          <li><a className='main-nav-link' href="#">Testimonials</a></li>
-          <li><a className='main-nav-link' href="#">Pricing</a></li>
-          <li><a className='main-nav-link nav-cta' href="#">Try for free</a></li>
+          <li><NavLink className='main-nav-link' to="how" onClick={onClickHandle}>How it works</NavLink></li>
+          <li><NavLink className='main-nav-link' to="meals" onClick={onClickHandle}>Meals</NavLink></li>
+          <li><NavLink className='main-nav-link' to="testimonials" onClick={onClickHandle}>Testimonials</NavLink></li>
+          <li><NavLink className='main-nav-link' to="pricing" onClick={onClickHandle}>Pricing</NavLink></li>
+          <li><NavLink className='main-nav-link nav-cta' to="cta" onClick={onClickHandle}>Try for free</NavLink></li>
         </ul>
       </nav>
 

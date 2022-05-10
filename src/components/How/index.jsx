@@ -6,7 +6,7 @@ import Heading from '../utils/Heading'
 
 const How = () => {
   return (
-    <section className='section-how'>
+    <section className='section-how' id='how'>
       <Heading sub="How it works" main="Your daily dose of health in 3 simple steps"></Heading>
       <div className="grid-container2">
         {/* Step 1 */}

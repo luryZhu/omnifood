@@ -3,7 +3,7 @@ import Heading from '../utils/Heading'
 
 const Pricing = () => {
   return (
-    <section className='section-pricing'>
+    <section className='section-pricing' id='pricing'>
       <Heading sub="Pricing" main="Eating well without breaking the bank"></Heading>
       <div className="grid-container2 margin-bottom-md">
         {/* plan 1 */}

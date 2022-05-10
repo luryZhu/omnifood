@@ -6,10 +6,41 @@ import Customer4 from '../../assets/images/customers/customer-4.jpg'
 import Customer5 from '../../assets/images/customers/customer-5.jpg'
 import Customer6 from '../../assets/images/customers/customer-6.jpg'
 import HeroImg from '../../assets/images/hero.png'
+import NavLink from '../utils/NavLink'
+import { useState, useRef, useCallback, useEffect } from "react";
+
 
 const Hero = () => {
+  let heroRef = useRef(null);
+  const scrollObserver = useCallback(
+    node => {
+      new IntersectionObserver(entries => {
+        let en = entries[0]
+        console.log(en.isIntersecting)
+        if (!en.isIntersecting) {
+          // 不相交，则sticky
+          document.body.classList.add('sticky')
+
+        } else {
+          document.body.classList.remove('sticky')
+        }
+
+      }, {
+        root: null,
+        threshold: 0,
+        rootMargin: '-80px',
+      }).observe(node);
+    },
+    []
+  );
+  useEffect(() => {
+    if (heroRef.current) {
+      scrollObserver(heroRef.current);
+    }
+  }, [scrollObserver, heroRef]);
+
   return (
-    <section className="section-hero">
+    <section ref={heroRef} className="section-hero">
       <div className="hero">
         <div className="hero-text-box">
           <h1 className="heading-primary">
@@ -19,8 +50,8 @@ const Hero = () => {
             The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to
             your personal tastes and nutritional needs. We have delivered 250,000+ meals last year!
           </p>
-          <a href="#" className="btn btn-full margin-right-sm">Start eating well</a>
-          <a href="#" className="btn btn-outline">Learn more &darr;</a>
+          <NavLink to="cta" className="btn btn-full margin-right-sm">Start eating well</NavLink>
+          <NavLink to="how" className="btn btn-outline">Learn more &darr;</NavLink>
           <div className="delivered-meals">
             <div className="delivered-imgs">
               <img src={Customer1} alt="image of customer" />

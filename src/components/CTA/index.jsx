@@ -2,7 +2,7 @@ import './style.less'
 
 const CTA = () => {
   return (
-    <section className='section-cta'>
+    <section className='section-cta' id="cta">
       <div className="container">
         <div className="cta">
           <div className="cta-text-box">

@@ -1,5 +1,6 @@
 import './style.less'
 import Logo from '../../assets/images/omnifood-logo.png'
+import NavLink from '../utils/NavLink'
 
 const Footer = () => {
   return (
@@ -7,9 +8,9 @@ const Footer = () => {
       <div className="footer-container">
         {/* logo */}
         <div className="logo-col">
-          <a href="#" className='footer-logo'>
+          <NavLink to="#" className='footer-logo'>
             <img className='logo' src={Logo} alt="omnifood logo" />
-          </a>
+          </NavLink>
           <ul className='social-links'>
             <li><a href="#">
               <i className='social-icon iconfont icon-weibo'></i>

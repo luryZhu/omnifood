@@ -21,7 +21,7 @@ const imgGallery = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery6, 
 const Testimonials = () => {
 
   return (
-    <section className='section-testimonials'>
+    <section className='section-testimonials' id='testimonials'>
       <div className="testimonials-container">
         <Heading noPadding={true} sub="Testimonials" main="Once you try it, you can't go back"></Heading>
         <div className="testimonials">
