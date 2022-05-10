@@ -4,7 +4,7 @@
 // 媒体查询中rem有问题，一般使用em
 
 /* 1344px 较小pc */
-@media (max-width:84em) {
+@media screen and (max-width:84em) {
     .hero {
         max-width: 120rem;
     }
@@ -19,7 +19,7 @@
 }
 
 /* 1344px 平板 */
-@media (max-width:75em) {
+@media screen and (max-width:75em) {
     html {
         // 1rem=9px
         font-size: 56.25%;
@@ -60,7 +60,7 @@
 }
 
 /* 944px 平板 */
-@media (max-width:59em) {
+@media screen and (max-width:59em) {
     html {
         // 1rem=9px
         font-size: 50%;
@@ -165,6 +165,115 @@
         &:link,
         &:visited {
             font-size: 3rem;
+        }
+    }
+}
+
+/* 704px 小平板 */
+@media screen and (max-width: 44em) {
+
+    .grid-container3,
+    .grid-container4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .diet {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .heading-secondary {
+        margin-bottom: 4.8rem;
+    }
+
+    .pricing-plan {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+
+    .nav-col {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+
+    .logo-col,
+    .addr-col {
+        grid-column: span 3;
+    }
+
+}
+
+/* 544px 小手机*/
+@media screen and (max-width: 34rem) {
+
+    .grid-container2,
+    .grid-container3,
+    .grid-container4,
+    .testimonials {
+        grid-template-columns: 1fr;
+        row-gap: 4.8rem;
+    }
+
+    .section-hero {
+        padding: 2.4rem 0 4.8rem 0;
+    }
+
+    .hero-text-box {
+        padding: 0;
+    }
+
+    .btn {
+
+        &,
+        &:link,
+        &:visited {
+            padding: 2.4rem 1.6rem;
+        }
+    }
+
+    .hero-img-box {
+        padding: 0;
+    }
+
+    .hero-img {
+        width: 80%;
+    }
+
+    .step-img-box {
+        transform: translateY(2.4rem);
+
+        &:nth-child(2) {
+            grid-row: 1;
+        }
+
+        &:nth-child(6) {
+            grid-row: 5;
+        }
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.2rem;
+    }
+
+    .cta {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-img-box {
+        grid-row: 1;
+        height: 32rem;
+        background-position: 30%;
+    }
+
+    .cta-text-box {
+        padding: 4rem;
+
+        .btn-form {
+            padding: 1.2rem;
         }
     }
 }
