@@ -6,6 +6,7 @@
     height: 9.6rem;
     padding: 0 4.8rem;
     background-color: @colorTint1;
+    position: relative;
     // position: fixed;
     // width: 100%;
     // z-index: 10;
@@ -55,5 +56,22 @@
     &:hover,
     &:active {
         background-color: @colorShade1;
+    }
+}
+
+/* Mobile navigation */
+
+.btn-mobile-nav {
+    background: none;
+    display: none;
+}
+
+.icon-mobile-nav {
+    font-size: 4rem;
+    // font-weight: @fontWeightBold;
+    color: @colorGreyDark;
+
+    &[name="btn-close"] {
+        display: none;
     }
 }
