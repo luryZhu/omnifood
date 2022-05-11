@@ -6,8 +6,11 @@ import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing"
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import "./utils/browserSupport";
 
 function App() {
+
+  console.log()
 
   return (
     <div className="App">

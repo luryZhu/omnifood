@@ -7,11 +7,11 @@ import Customer5 from '../../assets/images/customers/customer-5.jpg'
 import Customer6 from '../../assets/images/customers/customer-6.jpg'
 import HeroImg from '../../assets/images/hero.png'
 import NavLink from '../utils/NavLink'
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useRef, useCallback, useEffect } from "react";
 
 
 const Hero = () => {
-  let heroRef = useRef(null);
+  const heroRef = useRef(null);
   const scrollObserver = useCallback(
     node => {
       new IntersectionObserver(entries => {

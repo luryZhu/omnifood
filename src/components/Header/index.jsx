@@ -1,23 +1,44 @@
 import './style.less'
 import Logo from '../../assets/images/omnifood-logo.png'
 import NavLink from '../utils/NavLink'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const preventScroll = useCallback((e) => {
+    e.preventDefault()
+  }, [])
 
-  function onClickHandle() {
+  function onClickHandle(e) {
+    // console.log(e.target)
     setIsNavOpen(!isNavOpen)
+  }
+
+  function onColseHandle(e) {
+    // console.log(e.target)
+    setIsNavOpen(false)
   }
 
   useEffect(() => {
     if (isNavOpen) {
-      console.log("stop scroll")
-      document.documentElement.style.overflow = 'hidden'
+      // console.log("stop scroll")
+      // document.documentElement.style.overflow = 'hidden'
+      document.documentElement.addEventListener(
+        'touchmove',
+        preventScroll,
+        { passive: false }
+      );  //passive 参数不能省略，用来兼容ios和android
+      // document.body.classList.add('sticky')
     } else {
-      document.documentElement.style.overflow = 'visible'
+      // document.documentElement.style.overflow = 'visible'
+      document.documentElement.removeEventListener(
+        'touchmove',
+        preventScroll,
+        { passive: false }
+      );
+      // document.body.classList.remove('sticky')
     }
-  }, [isNavOpen])
+  }, [isNavOpen, preventScroll])
 
   return (
     <header className={'header ' + (isNavOpen ? 'nav-open ' : '')}>
@@ -26,11 +47,11 @@ const Header = () => {
       </NavLink>
       <nav className='main-nav'>
         <ul className='main-nav-list'>
-          <li><NavLink className='main-nav-link' to="how" onClick={onClickHandle}>How it works</NavLink></li>
-          <li><NavLink className='main-nav-link' to="meals" onClick={onClickHandle}>Meals</NavLink></li>
-          <li><NavLink className='main-nav-link' to="testimonials" onClick={onClickHandle}>Testimonials</NavLink></li>
-          <li><NavLink className='main-nav-link' to="pricing" onClick={onClickHandle}>Pricing</NavLink></li>
-          <li><NavLink className='main-nav-link nav-cta' to="cta" onClick={onClickHandle}>Try for free</NavLink></li>
+          <li><NavLink className='main-nav-link' to="how" onClick={onColseHandle}>How it works</NavLink></li>
+          <li><NavLink className='main-nav-link' to="meals" onClick={onColseHandle}>Meals</NavLink></li>
+          <li><NavLink className='main-nav-link' to="testimonials" onClick={onColseHandle}>Testimonials</NavLink></li>
+          <li><NavLink className='main-nav-link' to="pricing" onClick={onColseHandle}>Pricing</NavLink></li>
+          <li><NavLink className='main-nav-link nav-cta' to="cta" onClick={onColseHandle}>Try for free</NavLink></li>
         </ul>
       </nav>
 
