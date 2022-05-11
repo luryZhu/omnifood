@@ -54,12 +54,12 @@ const Hero = () => {
           <NavLink to="how" className="btn btn-outline">Learn more &darr;</NavLink>
           <div className="delivered-meals">
             <div className="delivered-imgs">
-              <img src={Customer1} alt="image of customer" />
-              <img src={Customer2} alt="image of customer" />
-              <img src={Customer3} alt="image of customer" />
-              <img src={Customer4} alt="image of customer" />
-              <img src={Customer5} alt="image of customer" />
-              <img src={Customer6} alt="image of customer" />
+              <img src={Customer1} alt="customer" />
+              <img src={Customer2} alt="customer" />
+              <img src={Customer3} alt="customer" />
+              <img src={Customer4} alt="customer" />
+              <img src={Customer5} alt="customer" />
+              <img src={Customer6} alt="customer" />
             </div>
             <p className="delivered-text"><span>250,000+</span> meals delivered already</p>
           </div>
