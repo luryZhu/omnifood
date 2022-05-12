@@ -9,6 +9,7 @@ const NavLink = (props) => {
                 activeClass="active"
                 className={props.className}
                 to={props.to}
+                spy={true}
                 smooth={true}
                 duration={500}
                 offset={-40}

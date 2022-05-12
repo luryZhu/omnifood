@@ -5,42 +5,69 @@ import Customer3 from '../../assets/images/customers/customer-3.jpg'
 import Customer4 from '../../assets/images/customers/customer-4.jpg'
 import Customer5 from '../../assets/images/customers/customer-5.jpg'
 import Customer6 from '../../assets/images/customers/customer-6.jpg'
-import HeroImg from '../../assets/images/hero.png'
+import HeroImg from '../../assets/images/hero-min.png'
+import HeroImgWebp from '../../assets/images/hero.webp'
 import NavLink from '../utils/NavLink'
-import { useRef, useCallback, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 const Hero = () => {
-  const heroRef = useRef(null);
-  const scrollObserver = useCallback(
-    node => {
-      new IntersectionObserver(entries => {
-        let en = entries[0]
-        console.log(en.isIntersecting)
-        if (!en.isIntersecting) {
-          // 不相交，则sticky
-          document.body.classList.add('sticky')
+  const [isTop, setIsTop] = useState(true)
+  // const heroRef = useRef(null);
+  // const scrollObserver = useCallback(
+  //   node => {
+  //     new IntersectionObserver(entries => {
+  //       let en = entries[0]
+  //       console.log(en.isIntersecting)
+  //       if (!en.isIntersecting) {
+  //         // 不相交，则sticky
+  //         document.body.classList.add('sticky')
 
-        } else {
-          document.body.classList.remove('sticky')
-        }
+  //       } else {
+  //         document.body.classList.remove('sticky')
+  //       }
 
-      }, {
-        root: null,
-        threshold: 0,
-        rootMargin: '-80px',
-      }).observe(node);
-    },
-    []
-  );
+  //     }, {
+  //       root: null,
+  //       threshold: 0,
+  //       rootMargin: '-80px',
+  //     }).observe(node);
+  //   },
+  //   []
+  // );
   useEffect(() => {
-    if (heroRef.current) {
-      scrollObserver(heroRef.current);
+    function scrollHandle() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      // console.log(scrollTop)
+      if (scrollTop === 0) {
+        setIsTop(true)
+      } else {
+        setIsTop(false)
+      }
     }
-  }, [scrollObserver, heroRef]);
+    window.addEventListener('scroll', scrollHandle)
+    return () => {
+      window.removeEventListener('scroll', scrollHandle)
+    }
+
+  }, [])
+
+  useEffect(() => {
+    if (isTop) {
+      document.body.classList.remove('sticky')
+    } else {
+      document.body.classList.add('sticky')
+    }
+  }, [isTop])
+  // useEffect(() => {
+  //   if (heroRef.current) {
+  //     scrollObserver(heroRef.current);
+  //   }
+  // }, [scrollObserver, heroRef]);
 
   return (
-    <section ref={heroRef} className="section-hero">
+    // <section ref={heroRef} className="section-hero">
+    <section className="section-hero">
       <div className="hero">
         <div className="hero-text-box">
           <h1 className="heading-primary">
@@ -65,7 +92,12 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-img-box">
-          <img className="hero-img" src={HeroImg} alt="hero" />
+          {/* <img className="hero-img" src={HeroImg} alt="hero" /> */}
+          <picture>
+            <source srcSet={HeroImgWebp} type="image/webp" />
+            <source srcSet={HeroImg} type="image/png" />
+            <img className="hero-img" src={HeroImgWebp} alt="woman enjoying food" />
+          </picture>
         </div>
       </div>
     </section >

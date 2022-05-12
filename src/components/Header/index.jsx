@@ -14,7 +14,7 @@ const Header = () => {
     setIsNavOpen(!isNavOpen)
   }
 
-  function onColseHandle(e) {
+  function onCloseHandle(e) {
     // console.log(e.target)
     setIsNavOpen(false)
   }
@@ -47,11 +47,11 @@ const Header = () => {
       </NavLink>
       <nav className='main-nav'>
         <ul className='main-nav-list'>
-          <li><NavLink className='main-nav-link' to="how" onClick={onColseHandle}>How it works</NavLink></li>
-          <li><NavLink className='main-nav-link' to="meals" onClick={onColseHandle}>Meals</NavLink></li>
-          <li><NavLink className='main-nav-link' to="testimonials" onClick={onColseHandle}>Testimonials</NavLink></li>
-          <li><NavLink className='main-nav-link' to="pricing" onClick={onColseHandle}>Pricing</NavLink></li>
-          <li><NavLink className='main-nav-link nav-cta' to="cta" onClick={onColseHandle}>Try for free</NavLink></li>
+          <li><NavLink className='main-nav-link' to="how" onClick={onCloseHandle}>How it works</NavLink></li>
+          <li><NavLink className='main-nav-link' to="meals" onClick={onCloseHandle}>Meals</NavLink></li>
+          <li><NavLink className='main-nav-link' to="testimonials" onClick={onCloseHandle}>Testimonials</NavLink></li>
+          <li><NavLink className='main-nav-link' to="pricing" onClick={onCloseHandle}>Pricing</NavLink></li>
+          <li><NavLink className='main-nav-link nav-cta' to="cta" onClick={onCloseHandle}>Try for free</NavLink></li>
         </ul>
       </nav>
 
