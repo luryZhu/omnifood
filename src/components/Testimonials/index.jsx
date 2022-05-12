@@ -23,8 +23,8 @@ const Testimonials = () => {
   return (
     <section className='section-testimonials' id='testimonials'>
       <div className="testimonials-container">
-        <Heading noPadding={true} sub="Testimonials" main="Once you try it, you can't go back"></Heading>
-        <div className="testimonials">
+        <Heading sub="Testimonials" main="Once you try it, you can't go back"></Heading>
+        <div className="testimonials container">
           <figure className="testimonial">
             <img className="testimonial-img" alt="Photo of customer Dave Bryson" src={Testimonial1} />
             <blockquote className="testimonial-text">
