@@ -66,7 +66,7 @@ const Testimonials = () => {
         {
           imgGallery.map((item, idx) => (
             <figure className="gallery-item" key={idx}>
-              <img src={item} alt="beautifully arranged food" />
+              <img src={item} alt="beautifully arranged food" width="800" height="800" />
             </figure>
           ))
         }

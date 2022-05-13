@@ -4,7 +4,7 @@ const CTA = () => {
   return (
     <section className='section-cta' id="cta">
       <div className="container">
-        <div className="cta">
+        <div className="cta-grid">
           <div className="cta-text-box">
             <div className="heading-secondary">
               Get your first meal for free!

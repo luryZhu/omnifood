@@ -6,13 +6,14 @@ const NavLink = (props) => {
         props.to !== "#"
             ?
             (<Link
-                activeClass="active"
+                // activeClass="active"
                 className={props.className}
                 to={props.to}
-                spy={true}
+                // spy={true}
+                // hashSpy={true}
                 smooth={true}
                 duration={500}
-                offset={-40}
+                offset={props.offset ? props.offset : -40}
                 onClick={props.onClick}>
                 {props.children}
             </Link>)
