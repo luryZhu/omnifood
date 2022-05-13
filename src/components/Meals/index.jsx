@@ -10,7 +10,7 @@ const Meals = () => {
       <div className="grid-container3">
         {/* meal 1 */}
         <div className="meal">
-          <img src={Meal1} className="meal-img" alt="Japanese Gyozas" />
+          <img src={Meal1} className="meal-img" width={700} height={467} alt="Japanese Gyozas" />
           <div className="meal-content">
             <div className="meal-tags">
               <span className="tag-vegetarian">Vegetarian</span>
@@ -35,7 +35,7 @@ const Meals = () => {
 
         {/* meal 2 */}
         <div className="meal">
-          <img src={Meal2} className="meal-img" alt="Avocado Salad" />
+          <img src={Meal2} className="meal-img" width={700} height={467} alt="Avocado Salad" />
           <div className="meal-content">
             <div className="meal-tags">
               <span className="tag-vegan">Vegan</span>

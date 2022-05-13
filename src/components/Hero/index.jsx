@@ -6,7 +6,7 @@ import Customer4 from '../../assets/images/customers/customer-4.jpg'
 import Customer5 from '../../assets/images/customers/customer-5.jpg'
 import Customer6 from '../../assets/images/customers/customer-6.jpg'
 import HeroImg from '../../assets/images/hero-min.png'
-import HeroImgWebp from '../../assets/images/hero.webp'
+import HeroImgWebp from '../../assets/images/hero-min.webp'
 import NavLink from '../utils/NavLink'
 import { useEffect, useState } from "react";
 
@@ -81,12 +81,12 @@ const Hero = () => {
           <NavLink to="how" className="btn btn-outline">Learn more &darr;</NavLink>
           <div className="delivered-meals">
             <div className="delivered-imgs">
-              <img src={Customer1} alt="customer" />
-              <img src={Customer2} alt="customer" />
-              <img src={Customer3} alt="customer" />
-              <img src={Customer4} alt="customer" />
-              <img src={Customer5} alt="customer" />
-              <img src={Customer6} alt="customer" />
+              <img src={Customer1} width={128} height={128} alt="customer" />
+              <img src={Customer2} width={128} height={128} alt="customer" />
+              <img src={Customer3} width={128} height={128} alt="customer" />
+              <img src={Customer4} width={128} height={128} alt="customer" />
+              <img src={Customer5} width={128} height={128} alt="customer" />
+              <img src={Customer6} width={128} height={128} alt="customer" />
             </div>
             <p className="delivered-text"><span>250,000+</span> meals delivered already</p>
           </div>
@@ -96,7 +96,7 @@ const Hero = () => {
           <picture>
             <source srcSet={HeroImgWebp} type="image/webp" />
             <source srcSet={HeroImg} type="image/png" />
-            <img className="hero-img" src={HeroImgWebp} alt="woman enjoying food" />
+            <img className="hero-img" width={1000} height={987} src={HeroImgWebp} alt="woman enjoying food" />
           </picture>
         </div>
       </div>

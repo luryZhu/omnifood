@@ -19,12 +19,12 @@ const How = () => {
             matter what diet you follow!</p>
         </div>
         <div className="step-img-box">
-          <img className='step-img' src={Screen1} alt="screen1" />
+          <img className='step-img' width={400} height={809} src={Screen1} alt="screen1" />
         </div>
 
         {/* Step 2 */}
         <div className="step-img-box">
-          <img className='step-img' src={Screen2} alt="screen2" />
+          <img className='step-img' width={400} height={809} src={Screen2} alt="screen2" />
         </div>
         <div className='step-text-box'>
           <p className='step-number'>02</p>
@@ -44,7 +44,7 @@ const How = () => {
             change delivery schedule and address daily!</p>
         </div>
         <div className="step-img-box">
-          <img className='step-img' src={Screen3} alt="screen3" />
+          <img className='step-img' width={400} height={809} src={Screen3} alt="screen3" />
         </div>
       </div>
     </section>

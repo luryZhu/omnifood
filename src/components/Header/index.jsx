@@ -55,7 +55,7 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button className='btn-mobile-nav' name='btn-mobile-nav' onClick={onClickHandle}>
+      <button className='btn-mobile-nav' aria-label='open navigation' onClick={onClickHandle}>
         <i className='icon-mobile-nav iconfont icon-menu'
           name="btn-menu"></i>
         <i className='icon-mobile-nav iconfont icon-close'
