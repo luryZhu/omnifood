@@ -31,7 +31,7 @@ const Pricing = () => {
             </li>
           </ul>
           <div className="plan-sign-up">
-            <a href="#" className="btn btn-full">Start eating well</a>
+            <a href="#cta" className="btn btn-full">Start eating well</a>
           </div>
         </div>
         {/* plan 2 */}
@@ -60,7 +60,7 @@ const Pricing = () => {
             </li>
           </ul>
           <div className="plan-sign-up">
-            <a href="#" className="btn btn-full">Start eating well</a>
+            <a href="#cta" className="btn btn-full">Start eating well</a>
           </div>
         </div>
       </div>

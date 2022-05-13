@@ -102,7 +102,7 @@ const Meals = () => {
       </div>
 
       <div className="container all-recipes">
-        <a href="#" className="link">See all recipes &rarr;</a>
+        <a href="#hero" className="link">See all recipes &rarr;</a>
       </div>
     </section>
   )

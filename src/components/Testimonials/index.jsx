@@ -26,7 +26,7 @@ const Testimonials = () => {
         <Heading sub="Testimonials" main="Once you try it, you can't go back"></Heading>
         <div className="testimonials container">
           <figure className="testimonial">
-            <img className="testimonial-img" alt="Photo of customer Dave Bryson" src={Testimonial1} />
+            <img className="testimonial-img" alt="customer Dave Bryson" src={Testimonial1} />
             <blockquote className="testimonial-text">
               Inexpensive, healthy and great-tasting meals, without even
               having to order manually! It feels truly magical.
@@ -35,7 +35,7 @@ const Testimonials = () => {
           </figure>
 
           <figure className="testimonial">
-            <img className="testimonial-img" alt="Photo of customer Ben Hadley" src={Testimonial2} />
+            <img className="testimonial-img" alt="customer Ben Hadley" src={Testimonial2} />
             <blockquote className="testimonial-text">
               The AI algorithm is crazy good, it chooses the right meals for
               me every time. It's amazing not to worry about food anymore!
@@ -44,7 +44,7 @@ const Testimonials = () => {
           </figure>
 
           <figure className="testimonial">
-            <img className="testimonial-img" alt="Photo of customer Steve Miller" src={Testimonial3} />
+            <img className="testimonial-img" alt="customer Steve Miller" src={Testimonial3} />
             <blockquote className="testimonial-text">
               Omnifood is a life saver! I just started a company, so there's
               no time for cooking. I couldn't live without my daily meals now!
@@ -53,7 +53,7 @@ const Testimonials = () => {
           </figure>
 
           <figure className="testimonial">
-            <img className="testimonial-img" alt="Photo of customer Hannah Smith" src={Testimonial4} />
+            <img className="testimonial-img" alt="customer Hannah Smith" src={Testimonial4} />
             <blockquote className="testimonial-text">
               I got Omnifood for the whole family, and it frees up so much
               time! Plus, everything is organic and vegan and without plastic.
@@ -66,56 +66,56 @@ const Testimonials = () => {
         {
           imgGallery.map((item, idx) => (
             <figure className="gallery-item" key={idx}>
-              <img src={item} alt="Photo of beautifully arranged food" />
+              <img src={item} alt="beautifully arranged food" />
             </figure>
           ))
         }
         {/* <figure class="gallery-item">
-          <img src={Gallery1} alt="Photo of beautifully
+          <img src={Gallery1} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery2} alt="Photo of beautifully
+          <img src={Gallery2} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery3} alt="Photo of beautifully
+          <img src={Gallery3} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery4} alt="Photo of beautifully
+          <img src={Gallery4} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery5} alt="Photo of beautifully
+          <img src={Gallery5} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery6} alt="Photo of beautifully
+          <img src={Gallery6} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery7} alt="Photo of beautifully
+          <img src={Gallery7} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery8} alt="Photo of beautifully
+          <img src={Gallery8} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery9} alt="Photo of beautifully
+          <img src={Gallery9} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery10} alt="Photo of beautifully
+          <img src={Gallery10} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery11} alt="Photo of beautifully
+          <img src={Gallery11} alt="beautifully
             arranged food" />
         </figure>
         <figure class="gallery-item">
-          <img src={Gallery12} alt="Photo of beautifully
+          <img src={Gallery12} alt="beautifully
             arranged food" />
         </figure> */}
       </div>
