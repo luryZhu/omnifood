@@ -19,7 +19,7 @@ const NavLink = (props) => {
             </Link>)
             :
             <a className={props.className}
-                href="#hero"
+                href="/#"
                 onClick={() => scroll.scrollToTop({ duration: 500 })}>
                 {props.children}
             </a>
