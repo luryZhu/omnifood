@@ -12,13 +12,13 @@ const Footer = () => {
             <img className='logo' src={Logo} alt="omnifood logo" />
           </NavLink>
           <ul className='social-links'>
-            <li><a href="/#">
+            <li><a className='social-link' href="/#">
               <i className='social-icon iconfont icon-weibo'></i>
             </a></li>
-            <li><a href="/#">
+            <li><a className='social-link' href="/#">
               <i className='social-icon iconfont icon-wechat-fill'></i>
             </a></li>
-            <li><a href="/#">
+            <li><a className='social-link' href="/#">
               <i className='social-icon iconfont icon-github-fill'></i>
             </a></li>
           </ul>
