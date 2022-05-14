@@ -6,6 +6,9 @@ demo地址: https://omnifood-lury.netlify.app/
 
 [视频](https://www.bilibili.com/video/BV1A34y1e7wL?p=101&spm_id_from=pageDriver) | [源码](https://github.com/jonasschmedtmann/html-css-course)
 
+详见系列博客：
+[CSS进阶实战 - Omnifood](https://luryzhu.github.io/categories/CSS%E7%AC%94%E8%AE%B0/CSS%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98/)
+
 <img src="./readme/image-20220428130913950.png" alt="image-20220428130913950" style="zoom:50%;" />
 
 # 工具/资源

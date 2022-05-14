@@ -28,15 +28,24 @@ const Header = () => {
         preventScroll,
         { passive: false }
       );  //passive 参数不能省略，用来兼容ios和android
+
+      document.documentElement.addEventListener(
+        'mousewheel',
+        preventScroll,
+        { passive: false }
+      );
       // document.body.classList.add('sticky')
     } else {
       // document.documentElement.style.overflow = 'visible'
       document.documentElement.removeEventListener(
         'touchmove',
-        preventScroll,
-        { passive: false }
+        preventScroll
       );
       // document.body.classList.remove('sticky')
+      document.documentElement.removeEventListener(
+        'mousewheel',
+        preventScroll
+      );
     }
   }, [isNavOpen, preventScroll])
 
